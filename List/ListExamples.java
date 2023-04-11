@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.sound.midi.SysexMessage;
-
 public class ListExamples{
     public static void main(String[] args) {
         List myList = new ArrayList();
@@ -60,6 +58,26 @@ public class ListExamples{
         List<Pessoa> myList2 = new ArrayList<Pessoa>();
         myList2.add(new Pessoa("Ken Kaneki", 19, "Masculino"));
         System.out.println(myList2);
+
+        System.out.println("\n List com generics do tipo String \n");
+
+        List<String> myList3 = new ArrayList<>();
+        myList3.add(new String("Goku"));
+        myList3.add(new String("Vegeta"));
+        myList3.add(new String("Gohan"));
+        myList3.add(new String("Piccolo"));
+        Iterator<String> iterator3 = myList3.iterator();
+        // Retorno String do iterator
+        while(iterator3.hasNext()){
+            String next3 = iterator3.next();
+            System.out.println(next3);
+        }
+
+        System.out.println("\n Imprimindo com um Foreach \n");
+
+        for (String next4 : myList3) {
+            System.out.println(next4);
+        }
         
     }
 }
