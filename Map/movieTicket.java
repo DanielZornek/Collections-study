@@ -11,6 +11,7 @@ public class movieTicket {
         this.dayOfWeek = dayOfWeek;
 
         if(dayOfWeek == "Wed"){
+            this.moviePriceOff = moviePrice/2;
             moviePrice -= moviePriceOff; 
         }
     }
